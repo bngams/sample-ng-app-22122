@@ -1,1 +1,16 @@
-<p>product-card works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ product.title | uppercase }}</mat-card-title>
+    <mat-card-subtitle>{{ product.price | currency: '€' }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{ product.thumbnail || 'https://picsum.photos/300/200' }}" alt="...">
+  <mat-card-content>
+    <p>
+      {{ product.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

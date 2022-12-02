@@ -18,7 +18,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(
     routes,
     {
-      preloadingStrategy: PreloadAllModules
+      preloadingStrategy: PreloadAllModules // /!\ canLoad routes not taken into account
     }
   )],
   exports: [RouterModule]

@@ -1,1 +1,9 @@
-<p>product-list works!</p>
+<!-- <app-product-card *ngFor="let p of products$ | async" [product]="p"></app-product-card> -->
+<div class="list">
+  <app-product-card *ngFor="let p of products" [product]="p"></app-product-card>
+</div>
+<ul class="pages">
+  <li *ngFor="let n of pages">
+    {{ n }}
+  </li>
+</ul>

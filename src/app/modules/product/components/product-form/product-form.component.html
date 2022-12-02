@@ -1,1 +1,11 @@
-<p>product-form works!</p>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput name="title" formControlName="title">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Price</mat-label>
+    <input matInput type="number" name="price" formControlName="price">
+  </mat-form-field>
+  <button mat-raised-button color="primary" [disabled]="!productForm.valid">Add</button>
+</form>

@@ -1,0 +1,15 @@
+.list, ul.pages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul.pages {
+  list-style-type: none;
+}
+
+ul.pages li {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}

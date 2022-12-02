@@ -6,6 +6,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
+import { MaterialModule } from 'src/app/utils/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ProductDashboardComponent } from './pages/product-dashboard/product-das
   ],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    MaterialModule, 
+    ReactiveFormsModule, // FormsModule // only template driven forms [(ngModel)]
   ]
 })
 export class ProductModule { }
