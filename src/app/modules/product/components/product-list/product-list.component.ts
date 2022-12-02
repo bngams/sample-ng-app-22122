@@ -10,7 +10,7 @@ import { ProductService } from '../../services/product.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  products!: Product[];
+  products: Product[] = [];
   products$!: Observable<Product[]>;
   numberPerPage = 5;
   numberOfPages! :number;
@@ -29,6 +29,7 @@ export class ProductListComponent implements OnInit {
     // this.testObservable();
     this.loadProductsWithHttp(this.numberPerPage, 1);
     // this.loadProducts$();
+    this.subscribeToProductsSubject();
   }
 
   testObservable() {
@@ -71,6 +72,15 @@ export class ProductListComponent implements OnInit {
 
   loadProducts$() {
     this.products$ = this.productService.fetchAll();
+  }
+
+  subscribeToProductsSubject(): void {
+    this.productService.productsSubject.subscribe(
+      data => {
+        console.log('data from subject', data);
+        this.products.push(data);
+      }
+    );
   }
 
 }

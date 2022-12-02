@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { AuthGuard } from './utils/auth.guard';
+import { AuthGuard } from './utils/auth/auth.guard';
 
 // Routes => alias => Route[]
 const routes: Routes = [
