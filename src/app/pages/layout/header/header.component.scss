@@ -1,0 +1,45 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+// SCSS
+nav {
+  ul {
+    display: flex;
+    list-style-type: none;
+
+    li {
+      margin: 15px;
+
+      a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+
+        &.active {
+          text-decoration: underline;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
+
+// CSS
+// nav ul{
+//   display: flex;
+// }
+
+// nav ul li {
+//   margin: 15px;
+// }
+
+// nav ul li a {
+//   text-decoration: none;
+//   color: while;
+// }
+
+// nav ul li a.active {
+//   text-decoration: underline;
+//   font-weight: bolder;
+// }

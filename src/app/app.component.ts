@@ -1,4 +1,8 @@
+// imports JS
+// include, require, import, etc...
+// reference Component class
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+  today = new Date();
+  request = new Observable();
 }
